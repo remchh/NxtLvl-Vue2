@@ -59,11 +59,10 @@ export const actions = {
   },
   fetchEvent({ commit, getters, dispatch }, id) {
     var event = getters.getEventById(id)
-
     if (event) {
       commit('SET_EVENT', event)
     } else {
-      EventService.getEvent(id)
+      return EventService.getEvent(id)
         .then(response => {
           commit('SET_EVENT', response.data)
         })
