@@ -249,6 +249,24 @@
       "date": "2021-05-01T04:28:00.000Z",
       "time": "15:00",
       "attendees": []
+    },
+    {
+      "id": 366625,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "vuejs",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
