@@ -27,7 +27,7 @@ import { mapState } from 'vuex'
 import store from '@/store/store'
 
 // Moved the current page & action call outside the component
-function getPageEvents(routeTo, next) {  
+function getPageEvents(routeTo, next) {
   const currentPage = parseInt(routeTo.query.page || 1)
   store
     .dispatch('event/fetchEvents', {
@@ -42,7 +42,8 @@ function getPageEvents(routeTo, next) {
 
 export default {
   props: {
-    page: { // current page gets passed in as a prop
+    page: {
+      // current page gets passed in as a prop
       type: Number,
       required: true
     }
@@ -50,10 +51,12 @@ export default {
   components: {
     EventCard
   },
-  beforeRouteEnter(routeTo, routeFrom, next) { // Before we enter the route
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    // Before we enter the route
     getPageEvents(routeTo, next)
   },
-  beforeRouteUpdate(routeTo, routeFrom, next) { // Before we update the route
+  beforeRouteUpdate(routeTo, routeFrom, next) {
+    // Before we update the route
     getPageEvents(routeTo, next)
   },
   computed: {

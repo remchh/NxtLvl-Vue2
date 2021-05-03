@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     createEvent() {
-      NProgress.start()  // <-- Start the progress bar
+      NProgress.start() // <-- Start the progress bar
       this.$store
         .dispatch('event/createEvent', this.event)
         .then(() => {

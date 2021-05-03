@@ -35,7 +35,8 @@
 <script>
 export default {
   props: {
-    event: {  // Simply receive the event to render
+    event: {
+      // Simply receive the event to render
       type: Object,
       required: true
     }
