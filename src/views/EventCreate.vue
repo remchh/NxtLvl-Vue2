@@ -2,19 +2,19 @@
   <div>
     <h1>Create an Event</h1>
     <form @submit.prevent="createEvent">
-    <BaseSelect
-      v-model="event.category"
-      label="Select a category"
-      :options="categories" 
-    />
+      <BaseSelect
+        v-model="event.category"
+        label="Select a category"
+        :options="categories"
+      />
 
       <h3>Name & describe your event</h3>
-      <BaseInput 
+      <BaseInput
         v-model="event.title"
-        label="Title" 
-        type="text" 
+        label="Title"
+        type="text"
         placeholder="Add an event title"
-        class='field'
+        class="field"
       />
 
       <BaseInput
@@ -44,10 +44,10 @@
         v-model="event.time"
         label="Select a time"
         :options="times"
-        class='field'
+        class="field"
       />
 
-      <input type="submit" class="button -fill-gradient" value="Submit" />
+      <BaseButton type="submit" class="-fill-gradient">Submit</BaseButton>
     </form>
   </div>
 </template>
