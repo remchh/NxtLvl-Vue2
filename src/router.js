@@ -63,7 +63,7 @@ const router = new Router({
     {
       // Here's the new catch all route
       path: '*',
-      redirect: { name: '404', params: { resource: 'main' } }
+      redirect: { name: '404', params: { resource: 'page' } }
     },
     {
       path: '/network-issue',
